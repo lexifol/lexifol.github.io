@@ -16,6 +16,11 @@ body {
 }
 /*-------------------------------------------*/
 
+html {
+  scroll-padding-top: 80px; /* Adjust this value to match your fixed header's height */
+  scroll-behavior: smooth;
+}
+
 /* GENERAL */
 /* Fonts */
 .large{
@@ -26,8 +31,8 @@ body {
     letter-spacing: 4px;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 0px;  
-    background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+    margin: 0px;
+    background-image: linear-gradient(135deg, rgb(255, 255, 255)0%, rgb(255, 255, 255)60%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -61,7 +66,7 @@ body {
 .main-title{
     font-weight: normal;
     line-height: normal;
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
 .small{
@@ -84,10 +89,13 @@ body {
 
 .bold{
     font-weight: bold;
+    color: white;
+    font-size: 1.25em;
+    line-height: normal;
 }
 
 .colorful-letter{
-    background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+    background-image: linear-gradient(135deg, rgb(135, 151, 218)0%, rgb(134, 154, 255)60%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -260,12 +268,12 @@ body {
     transform: scale(1.5);
     transition: 1s ease-in-out;
     /* second solution: */
-    /* font-size: 1.2rem; 
+    /* font-size: 1.2rem;
     transition: font-size 2s ease-in-out;  */
 }
 
 .progress-bar:hover, .progress-bar:active {
-    box-shadow: 5px 5px 5px #cdadcd;
+    box-shadow: 5px 5px 5px #1c947e;
     transition: box-shadow 1s ease;
 }
 
@@ -283,6 +291,7 @@ nav {
     justify-content: center;
     padding: 20px;
     margin: 0px;
+    font-size: 1.5em;
 }
 
 .main-nav li {
@@ -507,20 +516,21 @@ footer{
 /* PROJECTS */
 /* I also used these card settings on other sub-pages */
 .card{
-    box-shadow: 0 3px 10px rgb(127 110 187 / 0.2); 
+    box-shadow: 0 3px 10px rgba(27, 101, 81, 0.2);
     padding: 20px;
 }
 
 .box{
     display: block;
-    width: 100px;
+    width: 100%;
+    height: 200px
 }
 /* ---------------------------------- */
 
 /* CONTACT ME */
 .box-contact{
     display: block;
-    width: 100%; 
+    width: 100%;
     text-align: center;
 }
 
@@ -554,7 +564,7 @@ footer{
 
     .main-title-large{
         font-size: 2rem;
-        text-align: center;  
+        text-align: center;
         margin: 0;
     }
 
@@ -578,7 +588,7 @@ footer{
     .padding-top{
         padding-top: 10px;
     }
-    
+
     .padding-right{
         padding-right: 10px;
     }
@@ -586,7 +596,7 @@ footer{
     .padding-bottom{
         padding-bottom: 10px;
     }
-    
+
     .padding-left{
         padding-left: 10px;
     }
@@ -627,11 +637,11 @@ footer{
         background-color: #ffffff;
         border: 1px solid #fd81bb4d;
     }
-    
+
     .toggle:hover{
         background-color: #f0e7e7;
     }
-    
+
     #drop:checked+.main-nav{
         display: block;
     }
@@ -676,21 +686,21 @@ footer{
 /* DARK THEME */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: rgba(45, 45, 45, 1);
+        background-color: rgb(0, 36, 45);
         color: white;
     }
 
     .baby-pink {
-        background-color: rgb(243, 162, 200);
+        background-color: rgb(125, 209, 199);
     }
 
     .baby-pink-light {
-        background-color: rgba(45, 45, 45, 1);
-        border: 2px solid rgb(243, 162, 200);
+        background-color: rgb(0, 49, 61);
+        border: 2px solid white;
     }
 
     .main-nav {
-        background-color: rgba(45, 45, 45, 1);
+        background-color: rgb(0, 49, 61);
     }
 
     .main-nav li a {
@@ -698,40 +708,39 @@ footer{
     }
 
     .main-nav li a:hover {
-        color: rgb(254, 175, 210);
+        color: white;
     }
 
     #main-toggle{
         border: 1px solid rgba(255, 255, 255, 0.6);
         background-color: rgba(45, 45, 45, 1);
     }
-    
+
     .nav-icon{
         background-color: rgba(255, 255, 255, 0.6);
     }
-    
+
     .nav-icon::before,
     .nav-icon::after{
         background-color: rgba(255, 255, 255, 0.6);
     }
 
     .button-outline{
-        border: 2px solid rgb(254, 175, 210);
+        border: 2px solid rgb(60, 157, 133);
         color: white;
     }
 
     .button-outline:hover, .button-outline:active{
-        border: 2px solid rgb(254, 175, 210);
-        background-color: rgb(254, 175, 210);
+        border: 2px solid rgb(60, 157, 133);
+        background-color: rgb(60, 157, 133);
     }
 
     .card{
-        box-shadow: 0 0px 0px; 
-        border: 2px solid rgb(254, 175, 210);
+        box-shadow: 0 0px 0px;
+        border: 2px solid rgb(60, 157, 133);
     }
 
     .logo{
-        background-color: white;
         padding: 2px;
         border-radius: 4px;
     }
@@ -753,3 +762,39 @@ footer{
         }
     }
 }
+/* Hero / Header background */
+.header-bg {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* full viewport height */
+  background-image: url('assets/bg.png');
+  background-size: cover;       /* fill the header area completely */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;      /* center horizontally */
+  align-items: center;          /* center vertically */
+  text-align: center;
+  color: white;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Optional dark overlay for text readability */
+.header-bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* adjust darkness */
+  z-index: 1;
+}
+
+/* Header content sits above overlay */
+.header-bg .header-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Navbar stays above background naturally */
