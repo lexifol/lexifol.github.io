@@ -9,6 +9,12 @@ html{
     -ms-text-size-adjust: 100%;
 }
 
+body {
+    background-color: rgb(0, 36, 45);
+    color: white;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0px;
+}
 /*-------------------------------------------*/
 
 html {
@@ -98,14 +104,15 @@ html {
 
 /* Background colors */
 .baby-pink{
-    background-color: rgba(253, 129, 187, 0.3);
+    background-color: rgb(125, 209, 199);
     margin: 20px auto;
     padding: 20px;
     text-align: center;
 }
 
 .baby-pink-light{
-    background-color: rgba(243, 162, 200, 0.3);
+    background-color: rgb(0, 49, 61);
+    border: 2px solid white;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
@@ -218,11 +225,11 @@ html {
 
 /* I only used button-outline on this project, but you may like the other one more */
 .button-outline{
-    border: 2px solid  rgba(253, 129, 187, 0.3);
+    border: 2px solid rgb(60, 157, 133);
     padding: 10px;
     text-decoration: none;
     border-radius: 5%;
-    color: black;
+    color: white;
 }
 
 .link{
@@ -249,8 +256,8 @@ html {
 
 /* ANIMATIONS AND OTHER BEAUTIES */
 .button-outline:hover, .button-outline:active{
-    border: 2px solid  rgba(253, 129, 187, 0.3);
-    background-color: rgba(253, 129, 187, 0.6);
+    border: 2px solid rgb(60, 157, 133);
+    background-color: rgb(60, 157, 133);
     padding: 10px;
     text-decoration: none;
     border-radius: 5%;
@@ -280,7 +287,7 @@ nav {
 }
 
 .main-nav{
-    background-color: rgb(253, 249, 249);
+    background-color: rgb(0, 49, 61);
     display: flex;
     list-style-type: none;
     justify-content: center;
@@ -294,12 +301,12 @@ nav {
 }
 
 .main-nav li a {
-    color: #000000;
+    color: white;
     text-decoration: none;
 }
 
 .main-nav li a:hover {
-    color: rgb(254, 175, 210);
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -317,7 +324,8 @@ nav {
 }
 
 #main-toggle{
-    border: 1px solid #df36854d;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(45, 45, 45, 1);
     float: right;
     padding: 20px;
     /* position: relative; */
@@ -325,7 +333,7 @@ nav {
 }
 
 .nav-icon{
-    background-color: #df36854d;
+    background-color: rgba(255, 255, 255, 0.6);
     display: block;
     height: 3px;
     width: 10px;
@@ -334,7 +342,7 @@ nav {
 
 .nav-icon::before,
 .nav-icon::after{
-    background-color: #df36854d;
+    background-color: rgba(255, 255, 255, 0.6);
     content: "";
     display: block;
     height: 100%;
@@ -349,11 +357,18 @@ nav {
 .nav-icon::after{
     top: -5px;
 }
+
+
+.hobbies{
+        background-color: white;
+        border-radius: 100%;
+        padding: 10px;
+}
 /* ---------------------------------- */
 
 /* FOOTER */
 footer{
-    color: #000000;
+    color: white;
     text-align: center;
     padding: 20px 0px;
 }
@@ -511,8 +526,8 @@ footer{
 /* PROJECTS */
 /* I also used these card settings on other sub-pages */
 .card{
-    box-shadow: 0 3px 10px rgba(27, 101, 81, 0.2);
-    padding: 20px;
+    box-shadow: 0 0px 0px;
+    border: 2px solid rgb(60, 157, 133);
 }
 
 .box{
@@ -531,6 +546,8 @@ footer{
 
 .logo{
     width: 50px;
+    padding: 2px;
+    border-radius: 4px;
 }
 /* ---------------------------------- */
 
@@ -678,87 +695,13 @@ footer{
     }
 }
 
-/* DARK THEME */
-@media {
-    body {
-        background-color: rgb(0, 36, 45);
-        color: white;
-        font-family: 'Montserrat', Arial, sans-serif;
-        margin: 0px;
-    }
-
-    .baby-pink {
-        background-color: rgb(125, 209, 199);
-    }
-
-    .baby-pink-light {
-        background-color: rgb(0, 49, 61);
-        border: 2px solid white;
-    }
-
-    .main-nav {
-        background-color: rgb(0, 49, 61);
-    }
-
-    .main-nav li a {
-        color: white;
-    }
-
-    .main-nav li a:hover {
-        color: white;
-    }
-
-    #main-toggle{
-        border: 1px solid rgba(255, 255, 255, 0.6);
-        background-color: rgba(45, 45, 45, 1);
-    }
-
-    .nav-icon{
-        background-color: rgba(255, 255, 255, 0.6);
-    }
-
-    .nav-icon::before,
-    .nav-icon::after{
-        background-color: rgba(255, 255, 255, 0.6);
-    }
-
-    .button-outline{
-        border: 2px solid rgb(60, 157, 133);
-        color: white;
-    }
-
-    .button-outline:hover, .button-outline:active{
-        border: 2px solid rgb(60, 157, 133);
-        background-color: rgb(60, 157, 133);
-    }
-
-    .card{
-        box-shadow: 0 0px 0px;
-        border: 2px solid rgb(60, 157, 133);
-    }
-
-    .logo{
-        padding: 2px;
-        border-radius: 4px;
-    }
-
-    .hobbies{
-        background-color: white;
-        border-radius: 100%;
-        padding: 10px;
-    }
-
-    footer{
-        color: white;
-    }
-
-    @media screen and (max-width: 929px) {
+@media screen and (max-width: 929px) {
         .baby-pink-light {
             margin-left: 10px;
             margin-right: 10px;
         }
-    }
 }
+
 /* Hero / Header background */
 .header-bg {
   position: relative;
